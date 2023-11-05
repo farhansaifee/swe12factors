@@ -26,11 +26,13 @@ public class TodoItemController {
 
     @GetMapping
     public List<TodoItem> getAllTodoItems() {
+        logger.info("Here are all TODO items.");
         return repository.findAll();
     }
 
     @GetMapping("/{id}")
     public TodoItem getTodoItem(@PathVariable Long id) {
+        logger.info("Here is a TODO item with the ID " + id);
         return repository.findById(id).orElse(null);
     }
 
@@ -40,13 +42,16 @@ public class TodoItemController {
         if (existingItem != null) {
             existingItem.setDescription(updatedItem.getDescription());
             existingItem.setCompleted(updatedItem.isCompleted());
+            logger.info("TODO updated.");
             return repository.save(existingItem);
         }
+        logger.error("Error: TODO could not be updated");
         return null;
     }
 
     @DeleteMapping("/{id}")
     public void deleteTodoItem(@PathVariable Long id) {
+        logger.info("TODO Item deleted.");
         repository.deleteById(id);
     }
 

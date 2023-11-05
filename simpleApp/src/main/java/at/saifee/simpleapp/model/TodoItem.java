@@ -14,7 +14,7 @@ public class TodoItem {
     private boolean completed;
 
     public TodoItem() {
-        // Default no-argument constructor
+
     }
 
     public TodoItem(String description, boolean completed) {
