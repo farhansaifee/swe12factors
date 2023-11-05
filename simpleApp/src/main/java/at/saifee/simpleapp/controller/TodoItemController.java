@@ -5,17 +5,22 @@ import at.saifee.simpleapp.repository.TodoItemRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import java.util.List;
 
-// src/main/java/com/example/todo/controller/TodoItemController.java
 @RestController
 @RequestMapping("/api/todo")
 public class TodoItemController {
     @Autowired
     private TodoItemRepository repository;
 
+    private static final Logger logger = LoggerFactory.getLogger(TodoItemController.class);
+
     @PostMapping
     public TodoItem createTodoItem(@RequestBody TodoItem item) {
+        logger.info("TODO Item created.");
         return repository.save(item);
     }
 
