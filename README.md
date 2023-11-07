@@ -35,3 +35,11 @@ docker run -p 8080:8080 simpleapp
 ```
 The docker container from the image 'simpleapp' and port 8080 will then start.
 And after opening localhost:8080, everyone who did all the steps, is able to interact the todo list, as if it's running locally on your machine.
+
+### Screenshots
+Here are some screenshots of this project
+
+![Docker Image](![image](https://github.com/farhansaifee/swe12factors/assets/46992929/1d795931-1692-4e2f-b4f7-7de507d005bc))
+
+![Docker Container](![image](https://github.com/farhansaifee/swe12factors/assets/46992929/d966471c-c3de-41df-9f31-9f800e152ea4))
+
