@@ -3,10 +3,10 @@ This is a simple TODO List microservice project for an Assignment.
 
 Here is the Repo-Link: https://github.com/farhansaifee/swe12factors.git
 
-Here is an example of the CURL POST request: 
-´´´
+Here is an example of the CURL POST request:
+```
 curl -X POST -H "Content-Type: application/json" -d "{\"description\":\"New Todo Item\"}" http://localhost:8080/api/todo
-´´´
+```
 
 ## Service Execution - on my PC
 On my PC you just run the SimpleAppApplication to start the project.
